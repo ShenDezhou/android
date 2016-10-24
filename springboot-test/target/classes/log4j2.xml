@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+	<Properties>
+		<Property name="LOG_PATTERN">%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} -
+			%msg%n</Property>
+		<Property name="mainFile">/Users/Rock/Document/GitOSC/logger/main.log</Property>
+	</Properties>
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT" follow="true">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+		</Console>
+		
+		<File name="file" fileName="${mainFile}">
+			<PatternLayout>
+				<pattern>%d %-5level %logger{36} - %msg%n</pattern>
+			</PatternLayout>
+		</File>
+	</Appenders>
+	<Loggers>
+		<Logger name="org.hibernate.validator.internal.util.Version"
+			level="warn" />
+		<Logger name="org.apache.coyote.http11.Http11NioProtocol"
+			level="warn" />
+		<Logger name="org.apache.tomcat.util.net.NioSelectorPool"
+			level="warn" />
+		<Logger name="org.apache.catalina.startup.DigesterFactory"
+			level="error" />
+		<!-- spring日志控制,打印到文件中-->
+		<Logger name="org.springframework" level="error" additivity="false">
+			<AppenderRef ref="file" />
+	    </Logger>
+		<!-- Service层日志 -->
+		<Logger name="com.zls.springboot.service" level="debug" />
+		<!-- DAO层日志 -->
+		<Logger name="com.zls.springboot.dao" level="warn" />
+
+		<Root level="debug">
+			<AppenderRef ref="Console" />
+		</Root>
+	</Loggers>
+</Configuration>

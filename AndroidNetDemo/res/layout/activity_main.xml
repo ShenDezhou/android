@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <Button
+        android:id="@+id/open_webview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OpenWebview" />
+    
+    <Button
+        android:id="@+id/get_string"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="getString" />
+	<Button
+        android:id="@+id/get_bitmap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="getBitmap" />
+	
+	<Button
+        android:id="@+id/get_string_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="getStringUrl" />
+	<Button
+        android:id="@+id/get_bitmap_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="getBitmapUrl" />
+	
+	
+	<ImageView 
+	    android:id="@+id/pic"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/ic_launcher"/>
+    
+</LinearLayout>

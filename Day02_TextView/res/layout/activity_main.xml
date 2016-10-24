@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!-- 设置字体大小22sp 红色 加粗 倾斜 文本框结尾处绘制图片 -->
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="#00f"
+        android:textStyle="bold|italic"
+        android:drawableEnd="@drawable/ic_launcher"
+        android:text="我爱Android"/>
+    
+    <!-- 设置单行显示 中间省略 所有字母大写 -->
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="middle"
+        android:textAllCaps="true"
+        android:text="我爱Android我爱Android我爱Android我爱Android我爱Android我爱Android我爱Android"/>
+    
+    <!-- 给指定的文本增加可点击的超链接 设置超链接字体的颜色-->
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:drawableLeft="@drawable/mouse"
+        android:gravity="center_vertical"
+        android:text="www.baidu.com"
+        android:textColorLink="#f00"
+    	android:autoLink="web" />
+    
+    <!-- 跑马灯效果的实现 -->
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:text="跑马灯效果的实现跑马灯效果的实现跑马灯效果的实现跑马灯效果的实现" />
+    
+    
+</LinearLayout>
+
+<!--
+    dip    device independent pixels 即与设备无关的像素。目前这个单位已经被dp所取代，而不建议使用dip。
+    dp     在Android中用来表示非文字大小的尺寸。例如：外边距、内填充等。
+    px = dp * (dpi / 160)     3.7寸屏幕，分辨率320*480手机上，正好1px = 1dp。
+    sp      scale independent pixel  即与缩放比例无关的像素。在android中常用来表示文字大小。
+     
+    android:text 设置文本的内容
+    android:textSize  设置文本的字体大小（单位是sp）
+    android:textColor 设置文本的颜色（ 通过RGB设置）
+    android:textStyle="bold|italic"  设置字体的样式 如果需要设置多个通过|分割
+    android:drawableLeft  用于在文本框左侧绘制图片。该属性值通过“@drawable/图片文件名”来设置。
+     
+    TextView中的内容如果比较多会自动换行
+    android:lines 指定文本显示的行数
+   
+    android:autoLink  给指定的文本增加可点击的超链接  none phone email web map 
+    android:textColorLink 设置超链接的字体颜色 
+          注意:当文本内容的类型与android:autoLink指定的类型一致时才会添加链接
+
+	android:singleLine="true" 设置文本是否单行显示
+    android:ellipsize="middle"  start end middle marquee 注意:文字过长设置省略号，这个属性指定的是省略文本的位置 只有文本内容超出屏幕并且设置为单行显示时才会有效果
+    
+    【备注：】要实现跑马灯效果。要同时具有以下属性。
+    android:ellipsize="marquee"  跑马灯显示
+    android:singleLine="true"    单行显示
+    android:focusable="true"     获取焦点
+    android:focusableInTouchMode="true" 触摸获取焦点
+    android:marqueeRepeatLimit="marquee_forever"   跑马灯滚动的次数
+    -->

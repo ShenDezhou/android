@@ -1,0 +1,6 @@
+CREATE TABLE `t_user` (
+	`id` BIGINT(20) PRIMARY KEY AUTO_INCREMENT,
+	`username` VARCHAR(255) NOT NULL COMMENT '用户名',
+	`password` VARCHAR(255) NOT NULL COMMENT '密码',
+	`create_time` DATETIME  NOT NULL COMMENT '创建时间'
+) COMMENT='用户表' ENGINE=InnoDB;

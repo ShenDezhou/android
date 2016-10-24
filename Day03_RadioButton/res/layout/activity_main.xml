@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<!-- RadioGroup是LinearLayout的子类，所以RadioGroup本质上是一个存放RadioButton的布局容器。
+	   需要记住的是：默认的LinearLayout布局的Orientation属性是水平的，而默认的RadioGroup的Orientation属性是垂直的。 -->
+    <RadioGroup 
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        
+        <RadioButton
+            android:id="@+id/man" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="男人"/>
+         <RadioButton 
+             android:id="@+id/woman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="女人"/>
+          <RadioButton 
+            android:id="@+id/superWoman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="女博士"/>
+        
+    </RadioGroup>
+    
+    <Button 
+        android:id="@+id/button_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="click"
+        android:layout_marginLeft="30dp"
+        android:text="提交"/>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#6f00" >
+    
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:textSize="22sp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/darker_gray"
+        android:gravity="center"
+        android:text="天王盖地虎" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:textSize="22sp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/background_dark"
+        android:layout_gravity="center_vertical"
+        android:text="宝塔镇河妖" />
+    
+
+</LinearLayout>
+
+<!-- android:gravity 设置View中内容的对齐方式
+             如果该属性是定义在布局节点中，则该布局中所有控件的位置都受到这个属性的控制。
+             如果该属性出现在Button、TextView、EditText等控件中，则用来控制这些控件中内容的位置。
+     android:layout_gravity 设置View相对于父控件的对齐方式 -->
+
+<!-- 当作为父layout的LinearLayout的属性为android:orientation="vertical" 的时候，android:layout_gravity="？"这里设为横向的时候才能生效。比如：left，right，center_horizontal等；
+            当作为父layout的LinearLayout的属性为android:orientation="horizental" 的时候，android:layout_gravity="？"这里设为纵向的时候才能生效。比如：top，bottom，center_vertical等；
+            有一个比较特殊的是center，不管是横向还是纵向的时候，它总有一个方向起作用, 因为LinearLayout他只可能有一个方向  
+     LinearLayout 指明了方向后 所有子控件按顺序依次排列 -->
+

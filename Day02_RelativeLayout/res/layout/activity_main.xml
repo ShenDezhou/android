@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:gravity="center">
+	
+    <Button
+        android:id="@+id/button_main_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="中心" />
+
+    <Button
+        android:id="@+id/button_main_above"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_above="@+id/button_main_center"
+		android:layout_alignLeft="@+id/button_main_center"
+		android:layout_marginBottom="20dp"
+        android:text="上面" />
+    
+	<Button
+        android:id="@+id/button_main_below"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_below="@+id/button_main_center"
+		android:layout_alignLeft="@+id/button_main_center"
+		android:layout_marginTop="20dp"
+        android:text="下面" />
+	
+	<Button
+        android:id="@+id/button_main_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_toLeftOf="@+id/button_main_center"
+		android:layout_alignTop="@+id/button_main_center"
+		android:layout_marginRight="10dp"
+        android:text="左侧" />
+	
+	
+	<Button
+        android:id="@+id/button_main_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/button_main_center"
+		android:layout_alignTop="@+id/button_main_center"
+		android:layout_marginLeft="10dp"
+        android:text="右侧" />
+
+</RelativeLayout>
+
+<!-- RelativeLayout特有属性：
+     1、android:gravity    设置布局容器内子控件的对齐方式    
+     2、android:ignoreGravity    设置布局管理器内哪个控件不受gravity属性的影响
+
+（三）、RelativeLayout子元素的特有属性：LayoutParams
+    A、第一组：指兄弟控件之间的相对位置。该组属性的值是另一个控件的id。
+      layout_toRightOf      该控件在哪个控件的右侧
+      layout_toLeftOf       该控件在哪个控件的左侧
+      layout_above          该控件在哪个控件的上侧
+      layout_below          该控件在哪个控件的下侧
+
+    B、第二组：指兄弟控件之间的对齐关系。该组属性的值是另一个控件的id。
+      layout_alignRight     该控件与哪个控件的右对齐
+      layout_alignLeft      该控件与哪个控件的左对齐
+      layout_alignTop       该控件与哪个控件的顶对齐
+      layout_alignBottom    该控件与哪个控件的底对齐
+
+    C、第三组：指控件与父布局之间的对齐关系。该组属性的值是true或者false。
+      layout_alignParentRight         该控件与父布局控件的右对齐吗？
+      layout_alignParentLeft          该控件与父布局控件的左对齐吗？
+      layout_alignParentTop           该控件与父布局控件的顶端对齐吗？
+      layout_alignParentBottom        该控件与父布局控件的底部对齐吗？
+      layout_centerInParent           该控件位于父布局控件的中心位置吗？
+      layout_centerVertical           该控件位于父布局控件的垂直中心位置吗？
+      layout_centerHorizontal         该控件位于父布局控件的水平中心位置吗？ -->

@@ -1,0 +1,38 @@
+src：存放java源文件（开发人员源码放置目录）
+
+gen：R文件目录，R.java文件，它由Android开发工具自动生成，所有的资源文件都会在R.java中被注册，生成一个16进制的int型的资源id
+	R.java文件以只读方式打开，它的生成和更新由Android开发工具来完成，我们应避免手动修改。通过R.java可以很方便的找到对应的资源
+
+assets：资产目录，用于存放项目中的资源文件（通常是音频或者视频文件），这些资源以原始格式保存，不会在R.java中被注册生成资源id，且只能用编程方式读取（访问的时候需要AssetManager类），这个目录支持任意深度子目录
+
+Android[版本号]：这个目录包含了项目需要的Android库文件（jar文件）
+
+Android Private Libraries：存放第三方引入的jar包（libs中jar包的映射）
+
+bin：系统自动生成的二进制文件，包括编译后的class文件，打包后的apk文件以及相应的配置文件等
+
+libs：存放第三方引入的jar包
+
+res：资源目录，是Android项目中最重要的目录。用于存放应用程序中使用到的各种资源，该文件夹中的所有的文件都会在R.java文件中生成唯一的资源id
+  drawable：存放图片资源(备注：android中不允许图片资源的文件名中出现大写字母，并且不能以数字开头)
+  layout:存放布局文件
+  menu：存放菜单文件
+  values：资源文件
+    dimens.xml：尺寸文件
+    string.xml:字符串文件
+    styles.xml:主题和样式文件
+    
+AndroidManifest.xml:清单文件，Android应用的全局配置文件
+    该文件中定义了本App的版本号；
+    适用的手机操作系统最大及最小的兼容版本号；
+    整个项目中每写一个组件都需要在该清单文件中注册；
+    运行本程序的权限等等。
+    
+proguard-project.txt:代码混淆相关文件
+
+project.properties：工程属性的配置文件，配置编译的版本等。ADT14 以后， project.properties和default.properties合并成了project.properties
+                                                 供Eclipse使用，读取该项目使用Android版本号
+
+
+
+

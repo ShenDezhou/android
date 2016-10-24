@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/asyncTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AsyncTask" />
+    
+    <Button 
+        android:id="@+id/handler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Handler"/>
+
+    <TextView
+        android:id="@+id/handler_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="handle_msg" />
+    
+    <Button 
+        android:id="@+id/jump"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jump"/>
+    
+    <Button 
+        android:id="@+id/http_get"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送get请求"/>
+    
+    <Button 
+        android:id="@+id/http_url_get"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="URLConn发送get"/>
+
+</LinearLayout>

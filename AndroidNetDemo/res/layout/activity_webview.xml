@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!-- weight权重，一般用于按剩余位置多少来占用空间，比如需要一个控件填满剩余所有空间
+        	hint 用于输入前的提示
+         -->
+        <EditText 
+            android:id="@+id/path"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入网址"/>
+        
+        <Button 
+            android:id="@+id/webview_jump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跳"/>
+        
+    </LinearLayout>
+    
+    <WebView 
+        android:id="@+id/mwebview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    
+    
+
+</LinearLayout>

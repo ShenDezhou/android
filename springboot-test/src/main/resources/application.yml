@@ -1,0 +1,54 @@
+server:
+  port: 9999
+  session-timeout: 1800
+
+spring:
+  main:
+    show_banner: false
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  datasource:
+    name: datasource
+    initialize: true
+# for h2database debug log 
+#    url: jdbc:h2:mem:test;mode=mysql;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;TRACE_LEVEL_FILE=4
+    url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;mode=mysql
+    username: sa
+    password: sa
+    driverClassName: org.h2.Driver
+    max-active: 2
+    max-idle: 2
+    min-idle: 2
+    initial-size: 2
+    validation-query: select 1
+    test-on-borrow: true
+    test-on-return: false
+    test-while-idle: false
+    time-between-eviction-runs-millis: 3000
+    min-evictable-idle-time-millis: 3000
+    max-wait: 3000
+    jmx-enabled: true
+  data:
+    jpa:
+      repository:
+        enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    database: H2
+    hibernate: 
+      ddl-auto: none
+
+multipart:
+  maxFileSize: 1Mb
+  maxRequestSize: 10Mb
+  
+# 自定义配置
+fileupload:
+  temp: true
+  savePath: D:\\get
+
+

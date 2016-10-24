@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <ListView
+        android:id="@+id/meetinglistView"
+        android:layout_width="match_parent"
+        android:layout_height="340dp" />
+    
+    <EditText
+        android:id="@+id/scanResult"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentLeft="true"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:text="@string/scan_result" 
+        android:layout_below="@+id/meetinglistView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/scanResult"
+        android:layout_alignParentRight="true"         
+        android:layout_alignParentEnd="true" 
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/getMeetingList"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:text="@string/getMeetingList"/>
+
+        <Button
+            android:id="@+id/scanGuestCode"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:text="@string/scanGuestCode"/>
+
+        <Button
+            android:id="@+id/uploadGuestList"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:text="@string/uploadGuestList"/>
+    </LinearLayout>
+    
+</RelativeLayout>

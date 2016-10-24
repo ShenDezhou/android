@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">清数签到</string>
+    <string name="action_settings">退出</string>
+    <string name="scan_result">╰☆╮获取活动列表oo-┈→扫码oo-┈→上传</string>
+	<string name="getMeetingList">获取活动列表</string>
+    <string name="scanGuestCode">扫码</string>
+    <string name="uploadGuestList">上传签到嘉宾列表</string>
+</resources>

@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world"
+        android:background="#6f00" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world"
+        android:background="#60f0" />
+
+</LinearLayout>
+
+<!--
+   布局:表示界面控件的摆放位置的确定
+   注意:使用布局时跟标签必须是指定的布局  例如:如果界面控件希望在单一方向上摆放 就需要更标签为<LinearLayout>
+   android:id   设置控件的id
+   android:layout_width  布局或者是控件的宽度 
+   android:layout_height 布局或者是控件的高度
+            fill_parent  match_parent 与父控件一致（2.2之后推荐使用match_parent）
+            wrap_content 包裹内容
+   android:orientation   设置布局中控件的摆放方向
+            vertical     竖直摆放  布局中的每个控件占一行
+            horizontal   水平摆放  布局中的每个控件占一列
+   android:background    设置布局或者控件的背景颜色或背景图片
+   
+ -->
