@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SDKey</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="hello">hello</string>
+     <string name="opendevice">打开设备</string>
+    <string name="RSA">RSA</string>
+    <string name="DES">DES</string>
+    <string name="fileMgr">文件管理</string>
+    <string name="appMgr">应用管理</string>
+    <string name="userMgr">用户管理</string>
+    <string name="modifyPassword">修改密码</string>
+    <string name="modifyCmt">确认修改</string>
+    <string name="modifyCancel">取消</string>
+    <string name="genRandom">生成随机数</string>
+    <string name="desenc">加密</string>
+    <string name="desdec">解密</string>
+    <string name="installapp">安装应用</string>
+    <string name="deleteapp">删除应用</string>
+    <string name="introduce">关于本软件</string>
+    <string name="no_permission">没权限</string>
+    
+    
+    <drawable name="clr_normal">#FFBBE8B7</drawable>
+    <drawable name="clr_pressed">#FF236E19</drawable>
+    
+    
+
+</resources>

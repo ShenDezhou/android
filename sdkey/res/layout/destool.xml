@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"  
+ android:layout_width="fill_parent"  
+ android:layout_height="fill_parent"  
+ android:background="#ffffff"
+ android:fadingEdge="vertical">  
+
+<RelativeLayout  
+    android:orientation="horizontal"
+    android:layout_height="fill_parent" 
+    android:layout_width="fill_parent"
+    android:background="#ffffff"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+    
+<TextView 
+    android:id="@+id/DESToolTitle"
+    android:layout_height="wrap_content" 
+    android:layout_width="wrap_content" 
+    android:layout_gravity="center_horizontal" 
+    android:text="DES计算"
+    android:textColor="@android:color/black"
+    android:textSize="26dip"
+    android:layout_marginTop="10sp"
+/>
+
+<Button 
+    android:layout_height="40sp" 
+    android:layout_width="200sp"  
+    android:text="@string/genRandom" 
+    android:id="@+id/genRandom"
+    android:textColor="@android:color/black"
+    android:layout_marginTop="70sp"
+    android:layout_marginLeft="8sp"
+    android:layout_alignParentLeft="true"
+    android:background="@drawable/selector1"
+    >
+</Button>
+
+ <EditText 
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:id="@+id/randomdata"
+    android:hint="随机数"
+    android:layout_below="@id/genRandom"
+    android:gravity="top"
+    android:minLines="1"
+    android:maxLines="1"
+    android:layout_marginLeft="6sp"
+    android:layout_marginRight="6sp"
+    android:textColor="@drawable/gaoliang"
+    android:background="@android:drawable/edit_text"
+/>
+ 
+<EditText 
+    android:layout_height="wrap_content"
+    android:layout_width="300sp"
+    android:id="@+id/deskey"
+    android:hint="请输入密钥"
+    android:textColor="@drawable/gaoliang"
+    android:layout_alignParentRight="true"
+    android:singleLine="false"
+    android:layout_below="@+id/randomdata"
+    android:layout_marginRight="5sp"
+    android:background="@android:drawable/edit_text"
+    />
+   
+<TextView 
+    android:id="@+id/deskeyText"
+    android:layout_height="wrap_content" 
+    android:layout_width="100sp" 
+    android:layout_gravity="center_horizontal" 
+    android:text="密钥"
+    android:textColor="@android:color/black"
+    android:textSize="20sp"
+    android:layout_below="@+id/randomdata"
+    android:layout_alignTop="@id/deskey"
+    android:paddingTop="7sp"
+    android:layout_toLeftOf="@id/deskey"
+    android:layout_marginLeft="10sp"
+/>
+
+<EditText 
+    android:layout_height="wrap_content"
+    android:layout_width="300sp"
+    android:id="@+id/desdata"
+    android:hint="请输入数据"
+    android:textColor="@drawable/gaoliang"
+    android:background="@android:drawable/edit_text"
+    android:layout_alignParentRight="true"
+    android:singleLine="false"
+    android:layout_below="@+id/deskey"
+    android:layout_marginRight="5sp"
+    />
+   
+<TextView 
+    android:id="@+id/desdataText"
+    android:layout_height="wrap_content" 
+    android:layout_width="100sp" 
+    android:layout_gravity="center_horizontal" 
+    android:text="数据"
+    android:textColor="@android:color/black"
+    android:textSize="20sp"
+    android:layout_below="@+id/deskey"
+    android:layout_alignTop="@id/desdata"
+    android:paddingTop="7sp"
+    android:layout_toLeftOf="@id/desdata"
+    android:layout_marginLeft="10sp"
+/>
+
+<EditText 
+    android:layout_height="wrap_content"
+    android:layout_width="300sp"
+    android:id="@+id/desresult"
+    android:textColor="@drawable/gaoliang"
+    android:background="@android:drawable/edit_text"
+    android:layout_alignParentRight="true"
+    android:singleLine="false"
+    android:layout_below="@+id/desdata"
+    android:layout_marginRight="5sp"
+    />
+   
+<TextView 
+    android:id="@+id/desresultText"
+    android:layout_height="wrap_content" 
+    android:layout_width="100sp" 
+    android:layout_gravity="center_horizontal" 
+    android:text="结果"
+    android:textColor="@android:color/black"
+    android:textSize="20sp"
+    android:layout_below="@+id/desdata"
+    android:layout_alignTop="@id/desresult"
+    android:paddingTop="7sp"
+    android:layout_toLeftOf="@id/desresult"
+    android:layout_marginLeft="10sp"
+/>
+
+<RadioGroup 
+        android:id="@+id/deskeyalgo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/desresult">
+        <RadioButton 
+            android:id="@+id/desalgo"
+            android:text="DES"
+            android:textColor="@android:color/black"
+            android:checked="true"
+            />
+        <RadioButton 
+            android:id="@+id/des2keyalgo"
+            android:text="3DES2KEY"
+            android:textColor="@android:color/black"
+            />
+        <RadioButton 
+            android:id="@+id/des3keyalgo"
+            android:text="3DES3KEY"
+            android:textColor="@android:color/black"
+            />
+        
+    </RadioGroup>
+    <RadioGroup 
+        android:id="@+id/desecbcbc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/deskeyalgo">
+        <RadioButton 
+            android:id="@+id/desecb"
+            android:text="DES_ECB"
+            android:textColor="@android:color/black"
+            android:checked="true"
+            />
+        <RadioButton 
+            android:id="@+id/descbc"
+            android:text="DES_CBC"
+            android:textColor="@android:color/black"
+            />
+    </RadioGroup>
+
+    <RadioGroup 
+        android:id="@+id/padding"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/desecbcbc">
+        <RadioButton 
+            android:id="@+id/nopad"
+            android:text="NoPad"
+            android:textColor="@android:color/black"
+            android:checked="true"
+            />
+        <RadioButton 
+            android:id="@+id/paddingm2"
+            android:text="Pad_ISO9797M2"
+            android:textColor="@android:color/black"
+            />
+    </RadioGroup>
+    
+<LinearLayout android:id="@+id/deslinearlayo"
+    android:layout_height="50sp" 
+    android:layout_width="fill_parent" 
+    android:orientation="horizontal"
+    android:layout_below="@id/padding"
+    >
+
+<Button 
+    android:layout_width="wrap_content" 
+    android:layout_height="40sp" 
+    android:text="@string/desenc" 
+    android:id="@+id/desencBtn"
+    android:textColor="@android:color/black"
+    android:layout_weight="1"
+    android:layout_marginTop="5sp"
+    android:layout_marginLeft="10sp"
+    android:layout_marginRight="10sp"
+    android:background="@drawable/selector1"
+    >
+</Button>
+
+<Button 
+    android:layout_width="wrap_content" 
+    android:layout_height="40sp" 
+    android:text="@string/desdec" 
+    android:id="@+id/desdecBtn"
+    android:textColor="@android:color/black"
+    android:layout_weight="1"
+    android:layout_marginTop="5sp"
+    android:layout_marginRight="10sp"
+    android:background="@drawable/selector1"
+    >
+    
+</Button>
+  </LinearLayout>
+
+</RelativeLayout>
+</ScrollView>

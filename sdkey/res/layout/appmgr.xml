@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:orientation="horizontal"
+    android:layout_height="wrap_content" 
+    android:layout_width="match_parent"
+    android:background="@drawable/filemgrbackgd"
+    >
+    
+<TextView 
+    android:id="@+id/appmgrTitle"
+    android:layout_height="wrap_content" 
+    android:layout_width="wrap_content" 
+    android:layout_gravity="center_horizontal" 
+    android:text="应用管理"
+    android:textColor="@android:color/black"
+    android:textSize="26sp"
+    android:layout_marginTop="10sp"
+/>
+
+
+<TextView android:id="@+id/selectoneapp"  
+    android:layout_width="fill_parent" 
+    android:layout_height="50sp"  
+    android:layout_marginTop="5sp"
+    android:singleLine="true"
+    android:textSize="20sp"
+    android:gravity="center_vertical|left" 
+    android:layout_gravity="center_vertical|left"
+    android:layout_below="@+id/appmgrTitle"
+    android:text=" 请选择应用：" />  
+
+
+<RadioGroup 
+        android:id="@+id/applists"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="2sp"
+        android:layout_below="@+id/selectoneapp">
+        <RadioButton 
+            android:id="@+id/algToolApp"
+            android:text="算法工具应用"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            />
+        <RadioButton 
+            android:id="@+id/walletapp"
+            android:text="电子钱包应用"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            />
+        <RadioButton 
+            android:id="@+id/electricPowerApp"
+            android:text="电动汽车应用"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            />
+        
+    </RadioGroup>
+    
+<LinearLayout android:id="@+id/deslinearlayo"
+    android:layout_height="50sp" 
+    android:layout_width="fill_parent" 
+    android:orientation="horizontal"
+    android:layout_below="@id/applists"
+    >
+
+<Button 
+    android:layout_width="wrap_content" 
+    android:layout_height="40sp" 
+    android:text="@string/installapp" 
+    android:id="@+id/installapp"
+    android:textColor="@android:color/black"
+    android:layout_weight="1"
+    android:layout_marginTop="5sp"
+    android:layout_marginLeft="10sp"
+    android:layout_marginRight="10sp"
+    android:background="@drawable/selector1"
+    >
+</Button>
+
+<Button 
+    android:layout_width="wrap_content" 
+    android:layout_height="40sp" 
+    android:text="@string/deleteapp" 
+    android:id="@+id/deleteapp"
+    android:textColor="@android:color/black"
+    android:layout_weight="1"
+    android:layout_marginTop="5sp"
+    android:layout_marginRight="10sp"
+    android:background="@drawable/selector1"
+    >
+    
+</Button>
+  </LinearLayout>
+
+
+    
+</RelativeLayout>

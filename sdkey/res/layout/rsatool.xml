@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"  
+ android:layout_width="fill_parent"  
+ android:layout_height="fill_parent"  
+ android:background="#ffffff"
+ android:fadingEdge="vertical">  
+
+<RelativeLayout  
+    android:orientation="vertical"
+    android:layout_height="fill_parent" 
+    android:layout_width="fill_parent"
+    android:background="#ffffff"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+    
+<TextView 
+    android:id="@+id/RSAToolTitle"
+    android:layout_height="wrap_content" 
+    android:layout_width="wrap_content" 
+    android:layout_gravity="center_horizontal" 
+    android:text="RSA计算"
+    android:textColor="@android:color/black"
+    android:textSize="26sp"
+    android:layout_marginTop="10sp"
+/>
+    
+<LinearLayout android:id="@+id/linearlayo1"
+    android:layout_height="50sp" 
+    android:layout_width="fill_parent" 
+    android:orientation="horizontal"
+    android:layout_marginTop="15sp"
+    android:layout_below="@id/RSAToolTitle"
+    >
+<Button 
+    android:id="@+id/genRSAKey"
+    android:layout_height="40sp" 
+    android:layout_width="wrap_content" 
+    android:layout_weight="1"
+    android:text="  生成RSA密钥对   "
+    android:textColor="@android:color/black"
+    android:layout_marginTop="5sp"
+    android:layout_marginLeft="10sp"
+    android:layout_marginRight="5sp"
+    android:background="@drawable/selector1"
+    />
+ 
+<!--  <Button 
+    android:id="@+id/outputRSAPubKey"
+    android:layout_height="40sp"
+    android:layout_width="wrap_content" 
+    android:layout_weight="1"
+    android:text="  导出RSA公私钥  "
+    android:textColor="@android:color/black"
+    android:layout_marginTop="5sp"
+    android:layout_marginLeft="5sp"
+    android:layout_marginRight="10sp"
+    android:background="@drawable/selector1"
+    /> -->
+ </LinearLayout>
+ 
+<EditText 
+    android:layout_height="wrap_content"
+    android:layout_width="300sp"
+    android:id="@+id/pubKey"
+    android:textColor="@drawable/gaoliang"
+    android:layout_alignParentRight="true"
+    android:singleLine="false"
+    android:layout_below="@+id/linearlayo1"
+    android:layout_marginRight="5sp"
+    android:background="@android:drawable/edit_text"
+    />
+   
+<TextView 
+    android:id="@+id/pubKeyText"
+    android:layout_height="wrap_content" 
+    android:layout_width="100sp" 
+    android:layout_gravity="center_horizontal" 
+    android:text="公钥"
+    android:textColor="@android:color/black"
+    android:textSize="20sp"
+    android:layout_below="@+id/linearlayo1"
+    android:layout_alignTop="@id/fileNameText"
+    android:paddingTop="7sp"
+    android:layout_marginLeft="10sp"
+    android:layout_toLeftOf="@id/fileNameText"
+/>
+
+<EditText 
+    android:layout_height="wrap_content"
+    android:layout_width="300sp"
+    android:id="@+id/priKey"
+    android:textColor="@drawable/gaoliang"
+    android:background="@android:drawable/edit_text"
+    android:layout_alignParentRight="true"
+    android:singleLine="false"
+    android:layout_below="@+id/pubKey"
+    android:layout_marginRight="5sp"
+    />
+   
+<TextView 
+    android:id="@+id/priKeyText"
+    android:layout_height="wrap_content" 
+    android:layout_width="100sp" 
+    android:layout_gravity="center_horizontal" 
+    android:text="私钥"
+    android:textColor="@android:color/black"
+    android:textSize="20sp"
+    android:layout_below="@+id/pubKey"
+    android:layout_alignTop="@id/priKey"
+    android:paddingTop="7sp"
+    android:layout_toLeftOf="@id/priKey"
+    android:layout_marginLeft="10sp"
+/>
+
+<EditText 
+    android:layout_height="wrap_content"
+    android:layout_width="300sp"
+    android:id="@+id/module"
+    android:textColor="@drawable/gaoliang"
+    android:layout_alignParentRight="true"
+    android:singleLine="false"
+    android:layout_below="@+id/priKey"
+    android:layout_marginRight="5sp"
+    android:background="@android:drawable/edit_text"
+    />
+   
+<TextView 
+    android:id="@+id/moduleText"
+    android:layout_height="wrap_content" 
+    android:layout_width="100sp" 
+    android:layout_gravity="center_horizontal" 
+    android:text="模数"
+    android:textColor="@android:color/black"
+    android:textSize="20sp"
+    android:layout_below="@+id/priKey"
+    android:layout_alignTop="@id/module"
+    android:paddingTop="7sp"
+    android:layout_toLeftOf="@id/module"
+    android:layout_marginLeft="10sp"
+/>
+
+<EditText 
+    android:layout_height="wrap_content"
+    android:layout_width="300sp"
+    android:id="@+id/data"
+    android:textColor="@drawable/gaoliang"
+    android:layout_alignParentRight="true"
+    android:singleLine="false"
+    android:layout_below="@+id/module"
+    android:layout_marginRight="5sp"
+    android:background="@android:drawable/edit_text"
+    />
+   
+<TextView 
+    android:id="@+id/dataText"
+    android:layout_height="wrap_content" 
+    android:layout_width="100sp" 
+    android:layout_gravity="center_horizontal" 
+    android:text="数据"
+    android:textColor="@android:color/black"
+    android:textSize="20sp"
+    android:layout_below="@+id/module"
+    android:layout_alignTop="@id/data"
+    android:paddingTop="7sp"
+    android:layout_toLeftOf="@id/data"
+    android:layout_marginLeft="10sp"
+/>
+
+<EditText 
+    android:layout_height="wrap_content"
+    android:layout_width="300sp"
+    android:id="@+id/result"
+    android:textColor="@drawable/gaoliang"
+    android:background="@android:drawable/edit_text"
+    android:layout_alignParentRight="true"
+    android:singleLine="false"
+    android:layout_below="@+id/data"
+    android:layout_marginRight="5sp"
+    />
+   
+<TextView 
+    android:id="@+id/resultText"
+    android:layout_height="wrap_content" 
+    android:layout_width="100sp" 
+    android:layout_gravity="center_horizontal" 
+    android:text="结果"
+    android:textColor="@android:color/black"
+    android:textSize="20sp"
+    android:layout_below="@+id/data"
+    android:layout_alignTop="@id/result"
+    android:paddingTop="7sp"
+    android:layout_toLeftOf="@id/result"
+    android:layout_marginLeft="10sp"
+/>
+
+<LinearLayout android:id="@+id/linearlayo2"
+    android:layout_height="50sp" 
+    android:layout_width="fill_parent" 
+    android:orientation="horizontal"
+    android:layout_marginTop="7sp"
+    android:layout_below="@id/result"
+    >
+<Button 
+    android:id="@+id/pubEncrypt"
+    android:layout_height="40sp" 
+    android:layout_width="wrap_content" 
+    android:layout_weight="1"
+    android:text="  公钥加密  "
+    android:textColor="@android:color/black"
+    android:layout_marginTop="5sp"
+    android:layout_marginLeft="10sp"
+    android:layout_marginRight="5sp"
+    android:background="@drawable/selector1"
+    />
+ 
+ <Button 
+    android:id="@+id/priDecrpt"
+    android:layout_height="40sp"
+    android:layout_width="wrap_content" 
+    android:layout_weight="1"
+    android:text="  私钥解密   "
+    android:textColor="@android:color/black"
+    android:layout_marginTop="5sp"
+    android:layout_marginRight="10sp"
+    android:layout_marginLeft="5sp"
+    android:background="@drawable/selector1"
+    />
+ </LinearLayout>
+ 
+<LinearLayout android:id="@+id/linearlayo3"
+    android:layout_height="50sp" 
+    android:layout_width="fill_parent" 
+    android:orientation="horizontal"
+    android:layout_marginTop="7sp"
+    android:layout_below="@id/linearlayo2"
+    >
+<Button 
+    android:id="@+id/priSign"
+    android:layout_height="40sp" 
+    android:layout_width="wrap_content" 
+    android:layout_weight="1"
+    android:text="   私钥签名   "
+    android:textColor="@android:color/black"
+    android:layout_marginTop="5sp"
+    android:layout_marginLeft="10sp"
+    android:layout_marginRight="5sp"
+    android:background="@drawable/selector1"
+    />
+ 
+ <Button 
+    android:id="@+id/pubVerify"
+    android:layout_height="40sp"
+    android:layout_width="wrap_content" 
+    android:layout_weight="1"
+    android:text="  公钥验签   "
+    android:textColor="@android:color/black"
+    android:layout_marginTop="5sp"
+    android:layout_marginRight="10sp"
+    android:layout_marginLeft="5sp"
+    android:background="@drawable/selector1"
+    />
+ </LinearLayout>
+ 
+
+</RelativeLayout>
+</ScrollView>

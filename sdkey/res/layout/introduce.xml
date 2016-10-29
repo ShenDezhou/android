@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:orientation="horizontal"
+    android:layout_height="wrap_content" 
+    android:layout_width="match_parent"
+    android:background="@drawable/filemgrbackgd"
+    >
+    
+<TextView 
+    android:id="@+id/introduceTitle"
+    android:layout_height="wrap_content" 
+    android:layout_width="wrap_content" 
+    android:layout_gravity="center_horizontal" 
+    android:text="关于本软件"
+    android:textColor="@android:color/black"
+    android:textSize="26sp"
+    android:layout_marginTop="30sp"
+/>
+
+
+<TextView android:id="@+id/introduceText"  
+    android:layout_width="wrap_content" 
+    android:layout_height="300sp"  
+    android:singleLine="false"
+    android:textSize="20sp"
+    android:textStyle="bold"  
+    android:gravity="center_vertical" 
+    android:layout_gravity="center_vertical"
+    android:layout_marginTop="40sp"
+    android:layout_marginLeft="40sp"
+    android:layout_marginRight="40sp"
+    android:layout_below="@+id/introduceTitle"
+    android:text="   本软件为北京智芯微电子技术有限公司测试SDKey的一个Demo应用!\n\n    如对SDKey产品感兴趣,请联系北京智芯微电子技术有限公司!" />  
+
+    
+</RelativeLayout>

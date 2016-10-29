@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent" 
+    android:layout_width="fill_parent" 
+    android:orientation="vertical"
+    android:background="@drawable/menubackgd"
+    >
+
+
+<Button 
+    android:layout_width="180sp"
+    android:layout_height="40sp"
+    android:layout_gravity="center_horizontal" 
+    android:layout_marginTop="160sp"
+    android:text="@string/RSA" 
+    android:id="@+id/RSABtn"
+    android:background="@drawable/selector">
+    
+</Button>
+
+<Button 
+    android:layout_width="180sp"
+    android:layout_height="40sp" 
+    android:layout_gravity="center_horizontal" 
+    android:text="@string/DES" 
+    android:id="@+id/DESBtn"
+    android:layout_marginTop="3sp"
+    android:background="@drawable/selector"
+    >
+    
+</Button>
+
+<Button 
+    android:layout_width="180sp"
+    android:layout_height="40sp"
+    android:layout_gravity="center_horizontal" 
+    
+    android:text="@string/fileMgr" 
+    android:id="@+id/fileMgrBtn"
+    android:layout_marginTop="3sp"
+    android:background="@drawable/selector"
+    >
+    
+</Button>
+
+<Button 
+    android:layout_width="180sp"
+    android:layout_height="40sp"
+    android:layout_gravity="center_horizontal" 
+    android:text="@string/appMgr" 
+    android:id="@+id/appMgrBtn"
+    android:layout_marginTop="3sp"
+    android:background="@drawable/selector"
+    >
+    
+</Button>
+<Button 
+    android:layout_width="180sp"
+    android:layout_height="40sp"
+    android:layout_gravity="center_horizontal" 
+    android:text="@string/userMgr" 
+    android:id="@+id/userMgrBtn"
+    android:layout_marginTop="3sp"
+    android:background="@drawable/selector"
+    >
+    
+</Button>
+
+<Button 
+    android:layout_width="180sp"
+    android:layout_height="40sp"
+    android:layout_gravity="center_horizontal" 
+    android:text="@string/introduce" 
+    android:id="@+id/introduceBtn"
+    android:layout_marginTop="3sp"
+    android:background="@drawable/selector"
+    >
+    
+</Button>
+
+
+
+</LinearLayout>
